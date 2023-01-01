@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     transition: all .2s linear;
     text-decoration: none;
 }
@@ -150,7 +150,7 @@ body{
 .home{
     min-height: 100vh;
     width: 100vw;
-    background-image: url(../images/img1.jpg);
+    background-image: url(../images/image2.jpg);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -163,13 +163,13 @@ body{
 }
 
 .home h1{
-    color: #fff;
-    font-size: 5.5rem;
+    color: #ffffff;
+    font-size: 6rem;
 }
 
 .home h2{
     color: #fff;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .home .wave{
@@ -638,17 +638,24 @@ body{
     padding-top: 4rem;
 }
 
+
 .team .row .card .image img{
     height: 13rem;
     width: 13rem;
     border-radius: 50%;
     border: .5rem solid #fff;
-    box-shadow: 0 0 .5rem rgba(0,0,0,.3);
+    box-shadow: 0 0 .5rem rgba(7, 7, 7, 0.3);
     object-fit: cover;
 }
 
 .team .row .card .info h3{
     font-size: 2rem;
+    color: #333;
+}
+
+.team .row .card .info h4{
+    margin: 1rem;
+    font-size: 1.2rem;
     color: #333;
 }
 
@@ -848,13 +855,14 @@ body{
         
         .footer .footer-top {
             background: #002e5f;
-            padding: 60px 0 30px 0;
+            padding: 30px 0 10px 0;
         }
         
         .footer .footer-top .footer-info,
         .footer .footer-top .footer-links,
         .footer .footer-top .footer-contact,
         .footer .footer-top .footer-newsletter {
+            margin: auto;
             margin-bottom: 30px;
         }
         
@@ -880,6 +888,16 @@ body{
         .footer .footer-top h4 {
             font-size: 16px;
             font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        .footer .footer-top h5 {
+            font-size: 12px;
+            font-weight: 400;
             color: #ffffff;
             text-transform: uppercase;
             position: relative;
