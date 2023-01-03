@@ -73,8 +73,10 @@ body{
 .home{
     min-height: 70vh;
     width: 100vw;
-    background-image: url(../images/img3.jpg);
+    background-image: url(../images/gpatelllc.webp);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -513,6 +515,11 @@ body{
         height: 30px;
         font-size: 30px;
     }
+
+    .contact-info-container {
+        display: flex !important;
+        flex-direction: column;
+      }
 }
 
 @media (max-width: 1500px){
@@ -664,3 +671,55 @@ body{
         font-size: 1.5rem;
     }
 }
+
+.contact-info-container {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: "auto auto";
+    grid-gap: 10px;
+  }
+  
+  .contact-info-container h5:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  .contact-info-container h5 {
+    font-size: 14px !important;
+  }
+  
+  .contact-info-container strong {
+    font-size: 16px;
+  }
+
+  .footer .footer-top h4 {
+    font-size: 23px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+
+.footer .footer-top h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 70px;
+    border-bottom: 2px solid #ffffff;
+}
+
+.footer .footer-top h5 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
