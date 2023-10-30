@@ -25,14 +25,22 @@
         <div class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
-                <li><a href="#home">home</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#service">services</a></li>
-                <li><a href="#portfolio">portfolio</a></li>
-                <li><a href="#team">team</a></li>
-                <li><a href="careers.html">career</a></li>
-                <li><a href="#contact">contact</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#home" class="searchable">home</a></li>
+                <li><a href="#about" class="searchable">about</a></li>
+                <li><a href="#service" class="searchable">services</a></li>
+                <li><a href="#portfolio" class="searchable">portfolio</a></li>
+                <li><a href="#team" class="searchable">team</a></li>
+                <li><a href="careers.html" class="searchable">career</a></li>
+                <li><a href="#contact" class="searchable">contact</a></li>
+                <li><a href="#faq" class="searchable">FAQ</a></li>
+                <li><input type="text" id="search-bar" placeholder="Search..."
+                        style="font-size: 2rem; border-radius: 0.3rem;"></div>
+                    <div class="search-dropdown">
+                        <div class="search-dropdown-content" id="search-results-dropdown">
+                            <!-- Search results will be displayed here -->
+                        </div>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -427,8 +435,8 @@
                           <li><i class="ion-ios-arrow-forward"></i> <a href="#">Home</a></li>
                           <li><i class="ion-ios-arrow-forward"></i> <a href="#about">About us</a></li>
                           <li><i class="ion-ios-arrow-forward"></i> <a href="#service">Our services</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#">Terms & condition</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#">Privacy policy</a></li>
+                          <li><i class="ion-ios-arrow-forward"></i> <a href="#" class="searchable">Terms & condition</a></li>
+                          <li><i class="ion-ios-arrow-forward"></i> <a href="#" class="searchable">Privacy policy</a></li>
                       </ul>
                   </div>
 
@@ -485,5 +493,42 @@
   </div>
 
   <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+
+    <script>
+        function performSearch() {
+            var searchQuery = document.getElementById("search-bar").value.toLowerCase();
+            var searchResultsDropdown = document.getElementById("search-results-dropdown");
+            searchResultsDropdown.innerHTML = '';
+
+            var contentToSearch = document.getElementsByClassName("searchable");
+
+            if (searchQuery.trim() !== '') {
+                for (var i = 0; i < contentToSearch.length; i++) {
+                    var content = contentToSearch[i].textContent.toLowerCase();
+                    if (content.includes(searchQuery)) {
+                        var resultItem = document.createElement("div");
+
+                        var resultLink = document.createElement("a");
+                        resultLink.textContent = contentToSearch[i].textContent;
+                        resultLink.href = contentToSearch[i].getAttribute("href");
+                        resultLink.target = "_blank";
+
+                        resultLink.onclick = function () {
+                            window.location.href = this.href;
+                        };
+
+                        resultItem.appendChild(resultLink);
+
+                        resultItem.style.display = "block";
+
+                        searchResultsDropdown.appendChild(resultItem);
+                    }
+                }
+                searchResultsDropdown.style.display = 'block';
+            } else {
+                searchResultsDropdown.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
