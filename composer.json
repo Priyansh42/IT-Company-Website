@@ -1,5 +1,5 @@
 {
-    "name": "uddhav/itcompany",
+    "name": "amg/itcompany",
     "autoload": {
         "psr-4": {
             "Uddhav\\Itcompany\\": "src/"
