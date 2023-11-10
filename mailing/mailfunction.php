@@ -28,6 +28,12 @@ function mailfunction($mail_reciever_email, $mail_reciever_name, $mail_msg, $att
     $mail->setFrom($GLOBALS['mail_sender_email'], $GLOBALS['mail_sender_name']);
 
     $mail->addAddress($mail_reciever_email, $mail_reciever_name);
+ 
+
+    // Add CC recipients (Carbon Copy)
+    $mail->addCC('kariukiamschel9@gmail.com', 'Amschel-recipient2');
+    // $mail->addCC('ccrecipient2@example.com', 'CC Recipient 2');
+
 
     $mail->Subject = 'Someone Contacted You!';
 
