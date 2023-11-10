@@ -17,7 +17,7 @@
     $body = "<ul><li>Name: ".$name."</li><li>Phone: ".$phone."</li><li>Email: ".$email."</li><li>Apply For: ".$applyfor."</li><li>Experience: ".$experience." Yrs.</li><li>Resume(Attached Below):</li></ul>";
 	if(move_uploaded_file($tempfile, $filenameWithDirectory))
 	{
-		$status = mailfunction("", "Company", $body, $filenameWithDirectory); //reciever
+		$status = mailfunction("ayiendaglen@gmail.com", "Company", $body, $filenameWithDirectory); //reciever
         if($status)
             echo '<center><h1>Thanks! We will contact you soon.</h1></center>';
         else
