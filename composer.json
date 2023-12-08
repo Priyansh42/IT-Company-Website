@@ -1,8 +1,8 @@
 {
-    "name": "uddhav/itcompany",
+    "name": "priyansh/itcompany",
     "autoload": {
         "psr-4": {
-            "Uddhav\\Itcompany\\": "src/"
+            "Priyansh\\Itcompany\\": "src/"
         }
     },
     "authors": [
